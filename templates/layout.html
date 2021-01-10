@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block optional_script %}{% endblock optional_script %}
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+
+    {% if title %}
+      <title>Portfolio - {{ title }}</title>
+    {% else %}
+      <title>Portfolio - Jiawei Hu</title>
+    {% endif %}
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{{ url_for('home') }}">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#articles">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#learning-path">Learning Path</a>
+            </li>
+            <li class='nav-item dropdown'>
+              <a class='nav-link dropdown-toggle' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class='dropdown-item' href='mailto:jiaweihu08@gmail.com'>
+                  <img src="{{ url_for('static', filename='images/icons/email-icon.png') }}">
+                </a>
+                <a class='dropdown-item' href='https://www.linkedin.com/in/jiaweihu94/'>
+                  <img src="{{ url_for('static', filename='images/icons/linkedin-icon.png') }}">
+                </a>
+                <a class='dropdown-item' href='https://medium.com/@jiaweihu08'>
+                  <img src="{{ url_for('static', filename='images/icons/medium-icon.png') }}">
+                </a>
+                <a class='dropdown-item' href='https://github.com/Jiaweihu08?tab=repositories'>
+                  <img src="{{ url_for('static', filename='images/icons/github-icon.png') }}">
+                </a>
+              </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div style='height:20px'></div>
+    {% block content %}{% endblock content %}
+    <div class='container'>
+      <footer class="blog-footer">
+        <p>
+          <a href="#">Back to top</a>
+        </p>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  </body>
+</html>

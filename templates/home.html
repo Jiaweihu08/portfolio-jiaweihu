@@ -1,0 +1,163 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class='container'>
+  <h3><a id='projects'>Projects</a></h3>
+  <div class="card-deck">
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/projects/chatbot.jpg') }}" class="card-img-top" height='230px'>
+      <div class="card-body">
+        <h5 class="card-title"><a href="https://github.com/Jiaweihu08/Chatbot">"Chitchat Bot"</a></h5>
+        <p class="card-text">A seq2seq attention model for chitchatting.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/projects/nst.jpg') }}" class="card-img-top" height='230px'>
+      <div class="card-body">
+        <h5 class="card-title"><a href="https://github.com/Jiaweihu08/Real-Time-NST/blob/master/RTNST_v3.ipynb">Neural Style Transfer</a></h5>
+        <p class="card-text">Transfer the style of your image with ML. No need to become a PS expert!</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/projects/sentiment.jpg') }}" class="card-img-top" height='230px'>
+      <div class="card-body">
+        <h5 class="card-title"><a href="https://sentimentanalysis-jiawei.herokuapp.com ">Sentiment Analysis</a></h5>
+        <p class="card-text">Analyze the sentiment of any given text!</p>
+      </div>
+    </div>
+  </div>
+  <div style='height:20px'></div>
+  <div class="card-deck">
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/projects/sorting.jpg') }}" class="card-img-top" height='230px'>
+      <div class="card-body">
+        <h5 class="card-title"><a href="{{ url_for('sorting_algo') }}">Visualizing Sorting Algorithms</a></h5>
+        <p class="card-text">Visualize sorting algorithms for intuitive understanding.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/projects/path-finding.jpg') }}" class="card-img-top" height='230px'>
+      <div class="card-body">
+        <h5 class="card-title"><a href="{{ url_for('path_finding') }}">Visualizing Path Finding Algorithms and Maze Generation</a></h5>
+        <p class="card-text">Find the fastest path between A and B!</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/projects/sudoku.jpg') }}" class="card-img-top" height='230px'>
+      <div class="card-body">
+        <h5 class="card-title"><a href="{{ url_for('sudoku_solver') }}">Sudoku Solver</a></h5>
+        <p class="card-text">Implementing backtracking algorithm to solve and generate sudoku puzzles.</p>
+      </div>
+    </div>
+  </div>
+  <hr>
+</div>
+
+<div class='container'>
+  <h3><a id='articles'>Articles</a></h3>
+  <div class="row no-gutters bg-light position-relative">
+    <div class="col-md-6 mb-md-0 p-md-4">
+      <img src="{{ url_for('static', filename='images/articles/focus.jpeg') }}" class="w-100" alt="...">
+    </div>
+    <div class="col-md-6 position-static p-4 pl-md-0">
+      <h5 class="mt-0">The Transformer Isn’t As Hard To Understand As You Might Think</h5>
+      <h6 class="text-muted">Cracking Attentions — building the base to understanding the latest SOTA NLP models.</h6>
+      <p>Transformer’s architecture has been the cornerstone for the development of many of the latest SOTA NLP models. It mainly relies on a mechanism called attention. Unlike other successful models that came before, it has no involvement with convolutional or recurrent layers what so ever.</p>
+      <div>
+        <small class="text-muted">9 mins read</small>
+      </div>
+      <a href="https://towardsdatascience.com/knocking-on-transformers-door-attention-mechanism-explained-intuitively-df5d4fcecdf8?sk=98bfb120a75b67b7e36a6851aed4240a" class="stretched-link">Continue reading on Medium</a>
+    </div>
+  </div>
+
+  <div style='height:20px'></div>
+
+  <div class="row no-gutters bg-light position-relative">
+    <div class="col-md-6 mb-md-0 p-md-4">
+      <img src="{{ url_for('static', filename='images/articles/nlp-preprocessing.jpeg') }}" class="w-100" alt="...">
+    </div>
+    <div class="col-md-6 position-static p-4 pl-md-0">
+      <h5 class="mt-0">An Overview for Text Representations in NLP</h5>
+      <h6 class='text-muted'>A discussion of three of the most used input types in NLP.</h6>
+      <p>This diagram summarizes the process of transforming a text corpus into different input formats for a Machine Learning model. Starting from the left, the Corpus goes through several steps before obtaining the Tokens, a set of text building blocks i.e. words, subwords, characters, etc. Since ML models are only capable of processing numerical values ...</p>
+      <div>
+        <small class="text-muted">17 min read</small>
+      </div>
+      <a href="https://towardsdatascience.com/an-overview-for-text-representations-in-nlp-311253730af1?sk=42a8290c6833d810c4a46d8a48d543e7" class="stretched-link">Continue reading on Medium</a>
+    </div>
+  </div>
+
+  <div style='height:20px'></div>
+
+  <div class="row no-gutters bg-light position-relative">
+    <div class="col-md-6 mb-md-0 p-md-4">
+      <img src="{{ url_for('static', filename='images/articles/forest.jpeg') }}" class="w-100" alt="...">
+    </div>
+    <div class="col-md-6 position-static p-4 pl-md-0">
+      <h5 class="mt-0">Ensemble Learning from Scratch</h5>
+      <h6 class='text-muted'>Introducing Ensemble Learning, a powerful tool to improve performance by combining trained models.</h6>
+      <p>For many beginners in Data Science and applied Machine Learning, finding the best model to fit the data at hand often implies experimenting with as many reasonable options as possible, and keep the best one while the rest is thrown away. Ensemble Learning provides an alternative by forming an ensemble with all trained models and its performance can be just as good as the best one, if not better!</p>
+      <div>
+        <small class="text-muted">7 min read</small>
+      </div>
+      <a href="https://towardsdatascience.com/ensemble-learning-from-scratch-20672123e6ca?sk=b3e61a69564c885683a3c54ea2e42116" class="stretched-link">Continue reading on Medium</a>
+    </div>
+  </div>
+  <hr>
+</div>
+
+<div class='container'>
+  <h3><a id='learning-path'>Learning Path - MOOCs and Books</a></h3>
+
+  <dl class="row">
+    <dt class="col-sm-3"><a href='https://www.coursera.org/account/accomplishments/specialization/KXJZRK2L6V7J'>Natural Language Processing</a></dt>
+    <dd class="col-sm-9">
+      <p>Use logistic regression, naïve Bayes, and word vectors to implement sentiment analysis, complete analogies & translate words</p>
+      <p>Use dynamic programming, hidden Markov models, and word embeddings to implement autocorrect, autocomplete & identify part-of-speech tags for words</p>
+      <p>Use recurrent neural networks, LSTMs, GRUs & Siamese network in TensorFlow & Trax for sentiment analysis, text generation & named entity recognition</p>
+      <p>Use encoder-decoder, causal, & self-attention to machine translate complete sentences, summarize text, build chatbots & question-answering</p>
+    </dd>
+    
+    <dt class="col-sm-3"><a href='https://www.coursera.org/account/accomplishments/verify/NDRRQYZQ3WAR'>Data Structures and Algorithms</a></dt>
+    <dd class="col-sm-9">
+      <p>Apply basic algorithmic techniques such as greedy algorithms, binary search, sorting and dynamic programming to solve programming challenges</p>
+      <p>Apply various data structures such as stack, queue, hash table, priority queue, binary search tree, graph and string to solve programming challenges</p>
+      <p>Apply graph and string algorithms to solve real-world challenges: finding shortest paths on huge maps and assembling genomes from millions of pieces</p>
+      <p>Solve complex programming challenges using advanced techniques: maximum flow, linear programming, approximate algorithms, SAT-solvers, streaming</p>
+    </dd>
+
+    <dt class="col-sm-3"><a href='https://www.coursera.org/account/accomplishments/professional-cert/HFMRX7YDSF7N'>TensorFlow in Practice</a></dt>
+    <dd class="col-sm-9">
+      <p>Best practices for TensorFlow, a popular open-source machine learning framework to train a neural network for a computer vision applications</p>
+      <p>Handle real-world image data and explore strategies to prevent overfitting, including augmentation and dropout</p>
+      <p>Build natural language processing systems using TensorFlow</p>
+      <p>Apply RNNs, GRUs, and LSTMs as you train them using text repositories</p>
+    </dd>
+
+    <dt class="col-sm-3"><a href='https://www.coursera.org/account/accomplishments/specialization/LXEXJS5AVXL8'>Deep Learning</a></dt>
+    <dd class="col-sm-9">Popular online course covering the foundamental concepts of Deep Learning. Including Convolutional networks, RNNs, LSTM, Adam, Dropout, BatchNorm, Xavier/He initialization, and more</dd>
+
+    <dt class="col-sm-3"><a href='https://www.coursera.org/account/accomplishments/verify/FTNNBLWPHXW4'>Machine Learning</a></dt>
+    <dd class="col-sm-9">
+      <p>This course provides a broad introduction to machine learning, datamining, and statistical pattern recognition</p>
+      <p>Topics include: (i) Supervised learning (parametric/non-parametric algorithms, support vector machines, kernels, neural networks). (ii) Unsupervised learning (clustering, dimensionality reduction, recommender systems, deep learning). (iii) Best practices in machine learning (bias/variance theory; innovation process in machine learning and AI)</p>
+    </dd>
+    <dt class="col-sm-3"><a href='https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/'>Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow</a></dt>
+    <dd class="col-sm-9">
+      <p>Learn ML foundamentals through an end-to-end project using Scikit-Learn and pands</p>
+      <p>Build and train many NN architectures for classification and regression using TF2</p>
+      <p>Discover object detection, semantic segmentation, attention machanisms, language models, GANs, and more</p>
+      <p>Explore the Keras API, the official high-level API for TF2</p>
+      <p>Exploit unsupervised learning techniques such as dimensionality reduction, clustering, and anomaly detection</p>
+    </dd>
+    <dt class="col-sm-3"><a href='https://www.oreilly.com/library/view/practical-natural-language/9781492054047/'>Pratical Natural Language Processing</a></dt>
+    <dd class="col-sm-9">
+      <p>Covering the wide spectrum of problem statements, tasks, and solution approaches within NLP</p>
+      <p>Implement and evaluate different NLP applications using ML and DL methods</p>
+      <p>Fine-tune NLP solution based on business problem and industrial vertical</p>
+      <p>Evaluate various algorithms and approaches for NLP product task, datasets, and stages</p>
+      <p>Understand best practices, opportunities, and the roadmap for NLP from a business and product leader's perspective</p>
+    </dd>
+  </dl>
+  <hr>
+</div>
+{% endblock content %}

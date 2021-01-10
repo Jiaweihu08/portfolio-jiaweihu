@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class='container'>
+	<div class="shadow-lg p-3 mb-5 bg-white rounded">
+		<div class='lead text-center'>Backtracking for Sudoku Solving and Generation</div>
+		<div style='height:20px'></div>
+		<div class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/oe_doxDKWyk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div style='height:20px'></div>
+		<div>
+			<p>Visualize Sudoku Solving and Generation with Pygame</p>
+			<p>- Implemented Backtracing to solve 9x9 Sudoku puzzles</p>
+			<p>- Sudoku generation:</p>
+			<ul>
+				<li>1. Random grid initialization</li>
+				<li>2. Solve the grid using backtracking to obtain a solved puzzle</li>
+				<li>3. Randomly pick a spot and check wether the assigned value is the only possible one. Remove the value it's the case</li>
+				<li>4. Repeat steps 2 and 3 until the desired number of remaining values is reached</li>
+			</ul>
+			<p>Download the code and try it out: <a href="https://github.com/Jiaweihu08/Solving-and-Generating-Sudoku-using-BackTracking">GitHub</a></p>
+		</div>
+	</div>
+</div>
+{% endblock content %}
